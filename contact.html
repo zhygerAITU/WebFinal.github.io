@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <title>Horror Quest</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-black shadow">
+        <div class="container-fluid container py-1">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="images/favicon.ico">
+                <h2 class="m-0 ms-2">Horror Quest</h2>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link me-5" href="javascript:void(0)" onclick="openNav()">Меню</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-5" href="index.html">Главная</a>
+                </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" aria-current="page" href="contact.html">Свяжитесь с нами</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5" href="about.html">О нас</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Свяжитесь с нами</a>
+            <a href="javascript:void(0)" onclick="togMusic()">Включить / Выключить музыку</a>
+            <p>Нажмите на клавишу b для Включения / Выключения музыки.</p>
+          </div>
+        </div>
+      </nav>
+</header>
+    
+
+  <main class="bg-black">
+    <section id="contact">
+      
+      <div class="container my-5 ">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card">
+              <div class="card-body bg-black text-white">
+                <h5 class="card-title text-danger text-center"><strong>Contact Us</strong></h5>
+                <form>
+                  <div class="form-group mt-3">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Name..." class="form-control bg-black text-white" id="name" pattern="[A-Za-z]+" required>
+                    <div class="error-message text-white" id="name-error"></div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="email">Email address</label>
+                    <input type="email" placeholder="Email address..." class="form-control bg-black text-white" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                    <div class="error-message text-white" id="email-error"></div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="phone">Phone number</label>
+                    <input type="phone" placeholder="Phone number..." class="form-control bg-black text-white" id="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required>
+                    <div class="error-message text-white" id="email-error"></div>
+                  </div>
+                  <div class="form-group mt-3 d-flex flex-column">
+                    <label for="gender">Gender</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="gender">Female
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="gendr">Male
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="gender" checked>Prefer Not To Say
+                      </div>
+
+                    </div>
+                    <label class="form-check-label" for="isFemale">
+                      Are you ready to be <span class="text-danger"><strong>scared</strong></span>?
+                    </label>
+                    <select name="ready" id="">
+                      <option value="yes">HECK YEAH!!!</option>
+                      <option value="no">Oh, no. I'm a little girl.</option>
+                      <option value="no">No, I am not going.</option>
+                    </select>
+                  <div class="form-group mt-3">
+                    <label for="gender">Date of Birth</label>
+                    <input class="form-control" type="date" name="date" id="date" required>
+                    <script>
+                      let dtToday = new Date();
+
+                      let month = dtToday.getMonth() + 1;
+                      let day = dtToday.getDate();
+                      let year = dtToday.getFullYear();
+
+                      if(month < 10)
+                          month = '0' + month.toString();
+                      if(day < 10)
+                          day = '0' + day.toString();
+
+                      let maxDate = year + '-' + month + '-' + day;    
+                      document.querySelector('#date').setAttribute('max', maxDate)
+                    </script>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="message">Message</label>
+                    <textarea placeholder="Your message..." class="form-control bg-black text-white" id="message" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-outline-light float-end mt-5" id="send-button">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          var submitCount = 0;
+          var intervalStart = Date.now();
+          
+          $('form').submit(function(event) {
+            event.preventDefault();
+            
+            var now = Date.now();
+            var intervalSeconds = (now - intervalStart) / 1000;
+            
+            if (submitCount >= 2 && intervalSeconds < 60) {
+              alert("Too many requests. Please try again later.");
+              return;
+            }
+            
+            submitCount++;
+            if (intervalSeconds > 300) {
+              submitCount = 1;
+              intervalStart = now;
+            }
+            
+            alert("Thank you! We will contact you later.");
+          });
+        });
+      </script>
+    </section>
+
+  </main>
+  <footer class="p-4 bg-black text-white">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Apple Store</h4>
+          <p>Astana Expo, Astana, Kazakhstan</p>
+          <p>Phone number: +7 (705) 220-5830</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Follow Us</h4>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://instagram.com/dandeliodon?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/groups/ElonMusk/?locale=ru_RU" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://t.me/zhigerD" target="_blank"><i class="fab fa-telegram fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/zhygerAITU" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="float-end"><a href="#"><img class="mx-auto centered" src="https://www.freeiconspng.com/thumbs/white-arrow-png/curved-white-arrow-png-0.png" width="30px"></a></p>
+      <p class="fw-normal"> All rights reserved. <span class="text-danger">Horror Quest</span> 2023</p>
+    </div>
+    
+
+</footer>
+
+</body>
+</html>
