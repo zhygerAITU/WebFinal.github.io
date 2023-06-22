@@ -1,0 +1,113 @@
+#img1 {background-image: url('https://mir-kvestov.kz/uploads/quests/20370/xlarge/iquest_garri_photo1.jpg?1682329944');}
+#img2 {background-image: url('../images/chernobyl2.jpeg')}
+#img3 {background-image: url('../images/chernobyl3.jpeg');}
+#img4 {background-image: url('../images/chernobyl1.jpeg');}
+#img5 {background-image: url('../images/chernobyl2.jpeg');}
+#img6 {background-image: url('../images/chernobyl3.jpeg');}
+#img7 {background-image: url('../images/garry1.jpeg');}
+#img8 {background-image: url('../images/garry2.jpeg');}
+#img9 {background-image: url('../images/garry3.jpeg');}
+#img10 {background-image: url('../images/internat1.jpeg');}
+#img11 {background-image: url('../images/prisoner1.jpeg');}
+#img12 {background-image: url('../images/prisoner2.jpeg');}
+#img13 {background-image: url('../images/prisoner3.jpeg');}
+#img14 {background-image: url('../images/avatar1.jpeg');}
+#img15 {background-image: url('../images/avatar2.jpeg');}
+#img16 {background-image: url('../images/avatar3.jpeg');}
+
+html {
+    height: 100%;
+}
+body {
+min-height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.shake:hover {
+animation: shake 0.5s;
+
+animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.custom-carousel {
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+}
+.custom-img {
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* How to w3 */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
