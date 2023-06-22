@@ -43,7 +43,7 @@ function togMusic() {
 }
 
 document.addEventListener('keypress', (e) => { 
-    if (e.key == 'b') {
+    if (e.key == 'm') {
         togMusic();
     }
 })
