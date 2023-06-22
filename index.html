@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="js/index.js" defer></script>
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+
+  <title>Horror Quest</title>
+</head>
+<body>
+
+  <header class="mb-3 pb-3">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black shadow">
+        <div class="container-fluid container py-1">
+            <a class="navbar-brand d-flex align-items-center toshake" href="index.html">
+                <img src="images/favicon.ico">
+                <h2 class="m-0 ms-2">Horror Quest</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link me-5" href="javascript:void(0)" onclick="openNav()">Меню</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" aria-current="page" href="contact.html">Свяжитесь с нами</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link me-5" href="about.html">О нас</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Свяжитесь с нами</a>
+            <a href="javascript:void(0)" onclick="togMusic()">Включить / Выключить музыку</a>
+            <p>Нажмите на клавишу b для Включения / Выключения музыки.</p>
+          </div>
+        </div>
+      </nav>
+</header>
+    
+
+<main class="bg-black">
+    <div id="carouselIndicators" class="carousel carousel-dark slide mt-5 container-fluid g-0" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="custom-carousel container-fluid" id="img1"></div>
+          </div>
+          <div class="carousel-item">
+              <div class="custom-carousel container-fluid" id="img2"></div>
+          </div>
+          <div class="carousel-item">
+              <div class="custom-carousel container-fluid" id="img3"></div>
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <hr class="divider-page container mx-auto" id="cats">
+
+    <div class="container p-5 d-flex flex-column align-items-center text-center my-5">
+      <h1 class="fw-normal text-danger align-items-center p"><div class="toshake">Horror</div> Quests For You...</h1>
+      <p class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ea error aut veritatis quisquam aliquid.</p>
+      <!-- <img class="mx-auto centered" src="font-awesome-svg/circle-arrow-up.svg" id="arrowDownAssortiment" width="30px"> -->
+    </div>
+
+    <div class="row container mx-auto" id="assortiment">
+      <div class="col-md-4 mb-5">
+        <div class="container-fluid p-0 shadow card bg-dark">
+          <div class="custom-img img-fluid" id="img1"></div>
+          <div class="card-body mt-2 mx-4">
+            <h2 class="fw-light text-danger">Carl</h2>
+            <p class="lead mb-5 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita quo itaque exercitationem distinctio vero?</p>
+            <a href="#"><button class="btn btn-outline-light mb-3">Купить</button></a>
+            <small class="text-light mx-auto mt-2 float-end">12500тг.</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="container-fluid p-0 shadow card bg-dark">
+          <div class="custom-img img-fluid" id="img2"></div>
+          <div class="card-body mt-2 mx-4">
+            <h2 class="fw-light text-danger">Sweet</h2>
+            <p class="lead mb-5 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita quo itaque exercitationem distinctio vero?</p>
+            <a href="#"><button class="btn btn-outline-light mb-3">Купить</button></a>
+            <small class="text-light mx-auto mt-2 float-end">9500тг.</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="container-fluid p-0 shadow card bg-dark">
+          <div class="custom-img img-fluid" id="img3"></div>
+          <div class="card-body mt-2 mx-4">
+            <h2 class="fw-light text-danger">Big Smoke</h2>
+            <p class="lead mb-5 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita quo itaque exercitationem distinctio vero?</p>
+            <a href="#"><button class="btn btn-outline-light mb-3">Купить</button></a>
+            <small class="text-light mx-auto mt-2 float-end">11000тг.</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="container-fluid p-0 shadow card bg-dark">
+          <div class="custom-img img-fluid" id="img4"></div>
+          <div class="card-body mt-2 mx-4">
+            <h2 class="fw-light text-danger">Raider</h2>
+            <p class="lead mb-5 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita quo itaque exercitationem distinctio vero?</p>
+            <a href="#"><button class="btn btn-outline-light mb-3">Купить</button></a>
+            <small class="text-light mx-auto mt-2 float-end">12000тг.</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="container-fluid p-0 shadow card bg-dark">
+          <div class="custom-img img-fluid" id="img5"></div>
+          <div class="card-body mt-2 mx-4">
+            <h2 class="fw-light text-danger">Katrina</h2>
+            <p class="lead mb-5 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita quo itaque exercitationem distinctio vero?</p>
+            <a href="#"><button class="btn btn-outline-light mb-3">Купить</button></a>
+            <small class="text-light mx-auto mt-2 float-end">5000тг.</small>
+          </div>
+        </div>
+      </div>
+                <div class="col-md-4 mb-5">
+        <div class="container-fluid p-0 shadow card bg-dark">
+          <div class="custom-img img-fluid" id="img6"></div>
+          <div class="card-body mt-2 mx-4">
+            <h2 class="fw-light text-danger">Cholos</h2>
+            <p class="lead mb-5 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita quo itaque exercitationem distinctio vero?</p>
+            <a href="#"><button class="btn btn-outline-light mb-3">Купить</button></a>
+            <small class="text-light mx-auto mt-2 float-end">13000тг.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</main>
+
+<footer class="p-4 bg-black text-white">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Apple Store</h4>
+        <p>Astana Expo, Astana, Kazakhstan</p>
+        <p>Phone number: +7 (705) 220-5830</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Follow Us</h4>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://instagram.com/dandeliodon?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/groups/ElonMusk/?locale=ru_RU" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://t.me/zhigerD" target="_blank"><i class="fab fa-telegram fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://github.com/zhygerAITU" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="float-end"><a href="#"><img class="mx-auto centered" src="https://www.freeiconspng.com/thumbs/white-arrow-png/curved-white-arrow-png-0.png" width="30px"></a></p>
+    <p class="fw-normal"> All rights reserved. <span class="text-danger">Horror Quest</span> 2023</p>
+  </div>
+  
+
+</footer>
+</body>
+</html>
